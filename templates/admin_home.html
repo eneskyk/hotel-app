@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Sayfası</title>
+    <link rel="stylesheet" href="static/css/admin_style.css"> <!-- CSS dosyasını bağlantılandır -->
+</head>
+<body>
+    <div class="admin-container">
+        <header>
+            <h1>Admin Paneli</h1>
+            <nav>
+                <a href="/cikis" class="logout">Çıkış</a>
+            </nav>
+        </header>
+        
+        <div class="admin-panels">
+            <!-- 1. Panel: Kullanıcı Tanımlama ve Yetkilendirme -->
+            <div class="admin-panel">
+                <h2>Kullanıcı Tanımlama ve Yetkilendirme</h2>
+                <p>Yeni kullanıcılar ekleyebilir ve mevcut kullanıcıları yetkilendirebilirsiniz.</p>
+            <!--  -->
+                <a href="{{ url_for('kullanici_tanimla') }}" class="btn">Kullanıcı Tanımla</a>
+            </div>
+
+            <!-- 2. Panel: Kayıt Düzenleme -->
+            <div class="admin-panel">
+                <h2>Kayıt Düzenleme</h2>
+                <p>Mevcut kayıtları düzenleyebilir veya silebilirsiniz.</p>
+                <button onclick="location.href='/admin_home/kayit_duzenle'">Kayıt Düzenle</button>
+            </div>
+
+            <!-- 3. Panel: Raporlama -->
+            <div class="admin-panel">
+                <h2>Raporlama</h2>
+                <p>Otelin genel durumu hakkında raporlar alabilirsiniz.</p>
+                <button onclick="location.href='/admin_home/raporlama'">Raporları Görüntüle</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="static/js/admin_script.js"></script> <!-- JavaScript dosyasını bağlantılandır -->
+</body>
+</html>
